@@ -1,0 +1,4 @@
+/dist/*
+/public/*
+snail-admin/
+node_modules

@@ -1,8 +1,7 @@
-import { ExtractPropTypes } from 'vue'
+import { ExtractPropTypes } from "vue";
 
-export const type = ['default', 'card', 'fashion']
-export const size = ['large', 'normal', 'small', 'mini'];
-
+export const type = ["default", "card", "fashion"];
+export const size = ["large", "normal", "small", "mini"];
 
 export const tabProps = {
   type: {
@@ -13,12 +12,6 @@ export const tabProps = {
     type: String,
     values: size
   }
-}
+};
 
-export type TabsProps = ExtractPropTypes<typeof tabProps>
-
-
-
-
-
-
+export type TabsProps = ExtractPropTypes<typeof tabProps>;
