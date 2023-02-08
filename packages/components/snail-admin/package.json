@@ -1,0 +1,23 @@
+{
+  "name": "snail-admin",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "snail-admin",
+    "element-plus"
+  ],
+ 
+  "author": "hu-snail",
+  "license": "MIT",
+  "description": "",
+  "typings": "lib/index.d.ts"
+}
