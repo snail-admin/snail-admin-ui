@@ -14,7 +14,7 @@
     "lint": "pnpm lint:eslint && pnpm lint:prettier && pnpm lint:stylelint",
     "lint:commit": "commitlint --from $(git merge-base origin/dev HEAD) --to HEAD > ./commit-lint.txt",
     "prepare": "husky install",
-    "postinstall": "pnpm stub && concurrently \"pnpm gen:version\" \"pnpm run -C internal/metadata dev\""
+    "preinstall": "npx only-allow pnpm"
   },
   "keywords": [],
   "author": "",
@@ -32,11 +32,19 @@
     }
   },
   "lint-staged": {
-    "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
+    "*.{vue,js,ts,jsx,tsx,md,json}": [
+      "pnpm run lint",
+      "git add ."
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.7.0",
+    "commitizen": "^4.2.4",
+    "commitlint": "^17.0.3",
+    "commitlint-config-cz": "^0.13.3",
     "@types/node": "^18.13.0",
     "@types/sass": "^1.43.1",
     "@vitejs/plugin-vue": "^4.0.0",
