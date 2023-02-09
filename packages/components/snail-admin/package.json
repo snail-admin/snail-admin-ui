@@ -15,6 +15,9 @@
     "snail-admin",
     "element-plus"
   ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "author": "hu-snail",
   "license": "MIT",
   "description": "",

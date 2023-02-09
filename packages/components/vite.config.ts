@@ -12,6 +12,7 @@ export default defineConfig({
     minify: true,
     //css分离
     //cssCodeSplit: true,
+    emptyOutDir: false,
     rollupOptions: {
       //忽略打包vue文件
       external: ["vue", /\.scss/, "@snail-admin/utils"],
@@ -25,7 +26,7 @@ export default defineConfig({
           preserveModules: true,
           exports: "named",
           //配置打包根目录
-          dir: resolve(__dirname, "./snail-admin/es")
+          dir: resolve(__dirname, "./snail-admin/es"),
         },
         {
           format: "cjs",
@@ -35,13 +36,13 @@ export default defineConfig({
           preserveModules: true,
           exports: "named",
           //配置打包根目录
-          dir: resolve(__dirname, "./snail-admin/lib")
+          dir: resolve(__dirname, "./snail-admin/lib"),
         }
       ]
     },
     lib: {
       entry: "./index.ts",
-      name: "snail"
+      name: "snail",
     }
   },
 
@@ -54,7 +55,6 @@ export default defineConfig({
         resolve(__dirname, "./snail-admin/es/src"),
         resolve(__dirname, "./snail-admin/lib/src")
       ],
-      //指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: "../../tsconfig.json"
     }),
     {
@@ -65,7 +65,7 @@ export default defineConfig({
           const bundler: any = bundle[key as any];
           this.emitFile({
             type: "asset",
-            fileName: key, //文件名名不变
+            fileName: key,
             source: bundler.code.replace(/\.scss/g, ".css")
           });
         }
@@ -76,5 +76,6 @@ export default defineConfig({
     alias: {
       "@": resolve(__dirname, "src")
     }
-  }
+  },
+  
 });

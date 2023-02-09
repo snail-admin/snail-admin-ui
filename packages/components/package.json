@@ -5,8 +5,7 @@
   "main": "index.ts",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "build": "vite build && esno build/buildScss",
-    "build:scss": "esno build/buildScss"
+    "build": "vite build"
   },
   "files": [
     "es",

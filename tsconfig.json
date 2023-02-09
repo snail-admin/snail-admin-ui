@@ -10,8 +10,10 @@
     "moduleResolution": "Node",
     "lib": ["esnext", "dom"],
     "types": [
-      "node"
+      "node",
+      "unplugin-vue-define-options"
     ],
+    
     "rootDirs": ["./", "./packages/components"],
     "paths": {
       "@/*": [
