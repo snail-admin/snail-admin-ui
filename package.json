@@ -14,7 +14,8 @@
     "lint": "pnpm lint:eslint && pnpm lint:prettier && pnpm lint:stylelint",
     "lint:commit": "commitlint --from $(git merge-base origin/dev HEAD) --to HEAD > ./commit-lint.txt",
     "prepare": "husky install",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "commit": "git-cz"
   },
   "keywords": [],
   "author": "",
@@ -26,9 +27,14 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-git"
+      "path": "./node_modules/cz-customizable"
     }
   },
   "lint-staged": {
