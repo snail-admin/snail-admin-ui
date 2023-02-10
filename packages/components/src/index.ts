@@ -1,3 +1,4 @@
+import { default as Button } from "./button";
 import { default as Tabs } from "./tabs";
-export { Tabs };
-export default [Tabs];
+export { Button, Tabs };
+export default [Button, Tabs];

@@ -98,6 +98,12 @@ importers:
       vue: 3.2.47
       vue-eslint-parser: 9.1.0_eslint@8.33.0
 
+  examples:
+    specifiers:
+      snail-admin: workspace:^1.0.0
+    dependencies:
+      snail-admin: link:../packages/components/snail-admin
+
 packages:
 
   /@babel/code-frame/7.18.6:

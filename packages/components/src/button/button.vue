@@ -1,0 +1,7 @@
+<template>
+  <div>22</div>
+</template>
+
+<script lang="ts" setup>
+import "./style/index.scss";
+</script>
