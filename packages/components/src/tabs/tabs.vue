@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import "./style/index.scss";
 
- defineOptions({
-    name: 'Tabs'
-  })
+defineOptions({
+  name: "Tabs"
+});
 </script>
 
 <template>

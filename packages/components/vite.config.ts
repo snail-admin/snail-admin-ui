@@ -26,7 +26,7 @@ export default defineConfig({
           preserveModules: true,
           exports: "named",
           //配置打包根目录
-          dir: resolve(__dirname, "./snail-admin/es"),
+          dir: resolve(__dirname, "./snail-admin/es")
         },
         {
           format: "cjs",
@@ -36,13 +36,13 @@ export default defineConfig({
           preserveModules: true,
           exports: "named",
           //配置打包根目录
-          dir: resolve(__dirname, "./snail-admin/lib"),
+          dir: resolve(__dirname, "./snail-admin/lib")
         }
       ]
     },
     lib: {
       entry: "./index.ts",
-      name: "snail",
+      name: "snail"
     }
   },
 
@@ -76,6 +76,5 @@ export default defineConfig({
     alias: {
       "@": resolve(__dirname, "src")
     }
-  },
-  
+  }
 });

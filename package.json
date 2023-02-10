@@ -16,7 +16,6 @@
     "preinstall": "npx only-allow pnpm",
     "commit": "git-cz"
   },
-  "type": "module",
   "keywords": [
     "snail-admin",
     "element-plus"
